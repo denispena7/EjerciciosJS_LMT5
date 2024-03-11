@@ -37,6 +37,11 @@ function funcion2($x, $y)
     return $x / $y;
 }
 
+let fecha = new Date("December 25, 1995 23:15:30");
+let day = fecha.getMonth();
+
+document.write("<p> El mes es " + day + "</p>");
+
 /*
 - cambio de signo
 \ división entera
@@ -47,6 +52,6 @@ function funcion2($x, $y)
 
 == igual
 === igual estricto con mismo tipo de dato
-!= distinto
+!= distinto-+
 !== distinto estricto por el tipo de dato
 */
