@@ -86,6 +86,23 @@ for($i = 0; $i < 5; $i++)
 
 document.write("<p>El máximo es el " + $max + "</p>");
 
+/*
+    Ejercicio 8
+    maximoAleatorio();
+    function maximoAleatorio()
+    {
+        let $max = 0;
+        let $num;
+        for($i = 0; $i < 5; $i++)
+        {
+            $num = Math.round(Math.random() * 49 + 1);
+            document.write("Número: " +$num+ "</br>");
+        }
+        $max = Math.max($num, $max);
+    }
+    document.write("<p>El máximo es el " + $max + "</p>");
+*/
+
 // Ejercicio 9
 let vocales = new Array('a', 'e', 'i', 'o', 'u');
 for(let i = 0; i < 5; i++)

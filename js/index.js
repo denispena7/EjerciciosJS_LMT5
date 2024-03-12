@@ -42,6 +42,48 @@ let day = fecha.getMonth();
 
 document.write("<p> El mes es " + day + "</p>");
 
+// Switch
+$idioma = "eng";
+switch($idioma)
+{
+    case "esp":
+        document.write("<h1>El idioma es español</h1>");
+        break;
+    case "eng":
+        document.write("<h1>El idioma es inglés</h1>");
+        break;
+    default:
+        document.write("<h1>El idioma es otro</h1>");
+}
+
+// while
+$k = 5;
+while($k < 5)
+{
+    document.write("<h1>" + $k + "</h1>");
+    $k++;
+}
+
+// do-while
+do{
+    document.write("<h1>Con do-while" + $k + "</h1>");
+    $k++;
+} while($k < 5);
+
+let array = new Array(5, 3, 1, 2, 4);
+
+/*
+for($i = 0; $i < array.length; $i++)
+{
+    document.write("<h1>La posición "+$i+": " + array[$i] + "</h1>");
+}
+*/
+
+for($elemento in array)
+{
+    document.write("<h1>Valor: " + $elemento + "</h1>");
+}
+
 /*
 - cambio de signo
 \ división entera
