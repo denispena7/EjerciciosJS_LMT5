@@ -38,7 +38,7 @@ tabla(7);
 
 function tabla($valor)
 {
-    document.write("<h2> Tabla de multiplicar del número: " + $valor + "</h2>");
+    document.write("<h2> Tabla de multiplicar del número " + $valor + "</h2>");
     for($i = 0; $i <= 12; $i++)
     {
         document.write($valor + " x " + $i + " = " + ($valor * $i) + "</br>");
@@ -104,18 +104,99 @@ document.write("<p>El máximo es el " + $max + "</p>");
 */
 
 // Ejercicio 9
-let vocales = new Array('a', 'e', 'i', 'o', 'u');
-for(let i = 0; i < 5; i++)
+let vocales = ['a', 'e', 'i', 'o', 'u'];
+for($i = 0; $i < vocales.length; $i++)
 {
-    document.write(vocales[i] + "</br>");
+    document.write(vocales[$i] + "</br>");
 }
 
 document.write("</br>");
 
 // Ejercicio 10 
-let randoms = new Array(5);
-for(let i = 0; i < 5; i++)
+let randoms = [];
+for($i = 0; $i < 5; $i++)
 {
-    randoms[i] = Math.round(Math.random() * 9 + 1);
-    document.write("<p>randoms["+i+"] = " + randoms[i] + "</p>"); 
+    randoms[$i] = Math.round(Math.random() * 9 + 1); 
+}
+
+for($i = 0; $i < 5; $i++)
+{
+    document.write("<p>randoms["+$i+"] = " + randoms[$i] + "</p>");
+}
+
+// Ejercicio 11
+let matriz1 = [];
+let matriz2 = [];
+let matrizSuma = [];
+
+document.write("<p>Contenido matriz 1:</p>");
+for($i = 0; $i < 10; $i++)
+{
+    matriz1[$i] = Math.round(Math.random() * 9 + 1);
+    document.write(matriz1[$i] + " ");
+}
+
+document.write("<p>Contenido matriz 2:</p>");
+for($i = 0; $i < 10; $i++)
+{
+    matriz2[$i] = Math.round(Math.random() * 9 + 1);
+    document.write(matriz2[$i] + " ");
+}
+
+document.write("<p>Suma de las matrices:</p>");
+for($i = 0; $i < 10; $i++)
+{
+    matrizSuma[$i] = matriz1[$i] + matriz2[$i];
+    document.write(matrizSuma[$i] + " ");
+}
+
+// Ejercicio 12
+let pares = [];
+document.write("<p>Números pares:</p>");
+for($i = 0; $i < 20; $i++)
+{
+    pares[$i] = $i * 2;
+}
+
+for($i = 0; $i < 20; $i++)
+{
+    document.write(pares[$i] + " ");
+}
+
+// Ejercicio 13
+let $cadena = "Ayuntamiento";
+document.write("<p>Cadena separada por caracteres</p>");
+for($i = 0; $i < $cadena.length; $i++)
+{
+    document.write($cadena.charAt($i) + " ");
+}
+
+// Ejercicio 14
+document.write("<p>Analizando la palabra: " + $cadena + "</p>");
+for($i = 0; $i < $cadena.length; $i++)
+{
+    if($cadena.charAt($i) == 'a')
+    {
+        document.write("<p>La vocal a aparece en la posición: " + $i + "</p>");
+    }
+
+    if($cadena.charAt($i) == 'e')
+    {
+        document.write("<p>La vocal e aparece en la posición: " + $i + "</p>");
+    }
+
+    if($cadena.charAt($i) == 'i')
+    {
+        document.write("<p>La vocal i aparece en la posición: " + $i + "</p>");
+    }
+
+    if($cadena.charAt($i) == 'o')
+    {
+        document.write("<p>La vocal o aparece en la posición: " + $i + "</p>");
+    }
+
+    if($cadena.charAt($i) == 'u')
+    {
+        document.write("<p>La vocal u aparece en la posición: " + $i + "</p>");
+    }
 }
