@@ -84,6 +84,31 @@ for($elemento in array)
     document.write("<h1>Valor: " + $elemento + "</h1>");
 }
 
+let $cadena = "Hola mundo";
+document.write("charAt: " + $cadena.charAt(0) + "</br>");
+document.write("charCodeAt: " + $cadena.charCodeAt(0) + "</br>");
+document.write("indexOf: " + $cadena.indexOf("o") + "</br>");
+document.write("lastIndexOf: " + $cadena.lastIndexOf("o") + "</br>");
+document.write("length: " + $cadena.length + "</br>");
+$array = $cadena.split(" ");
+document.write("split: " + $array[1] + "</br>");
+document.write("substring: " + $cadena.substring(2, 7) + "</br>");
+document.write("toLowerCase: " + $cadena.toLowerCase() + "</br>");
+document.write("toUpperCase: " + $cadena.toUpperCase() + "</br>");
+
+let $fecha = new Date();
+document.write("Día del mes: " + $fecha.getDate() + "<br>");
+document.write("Día de la semana: " + $fecha.getDay() + "<br>");
+document.write("Año: " + $fecha.getFullYear() + "<br>");
+document.write("Mes: " + $fecha.getMonth() + "<br>");
+document.write("Horas: " + $fecha.getHours() + "<br>");
+document.write("Minutos: " + $fecha.getMinutes() + "<br>");
+document.write("Segundos: " + $fecha.getSeconds() + "<br>");
+document.write("Milisegundos: " + $fecha.getMilliseconds() + "<br>");
+
+/* $fecha = new Date(2015, 9, 22, 14, 0);
+document.write("Fecha: " + $fecha.getDay() + "<br>"); */
+
 /*
 - cambio de signo
 \ división entera

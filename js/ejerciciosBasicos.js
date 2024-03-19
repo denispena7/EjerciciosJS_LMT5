@@ -200,3 +200,99 @@ for($i = 0; $i < $cadena.length; $i++)
         document.write("<p>La vocal u aparece en la posición: " + $i + "</p>");
     }
 }
+
+// Ejercicio 15
+let $fecha = new Date();
+
+switch($fecha.getDay())
+{
+    case 0:
+        $dia = "Domingo";
+        break;
+    case 1:
+        $dia = "Lunes";
+        break;
+    case 2:
+        $dia = "Martes";
+        break;
+    case 3:
+        $dia = "Miércoles";
+        break;
+    case 4:
+        $dia = "Jueves";
+        break;
+    case 5:
+        $dia = "Viernes";
+        break;
+    case 6:
+        $dia = "Sábado";
+        break;
+}
+
+document.write("<b>Fecha actual: </b>" + $fecha + "<br>");
+document.write("<b>Día de la semana: </b>" + $dia + "<br>");
+document.write("<b>Día: </b>" + $fecha.getDate() + "<br>");
+document.write("<b>Mes: </b>" + ($fecha.getMonth()+1) + "<br>");
+document.write("<b>Año: </b>" + $fecha.getFullYear() + "<br>");
+
+// Escribir una función que genere un array con 10 número aleatorios y sume todos los números que sean pares
+document.write("<h2>Función suma pares array</h2>");
+let $numeros = [];
+sumaPares($numeros);
+
+function sumaPares($numeros)
+{
+    let $suma = 0;
+    for($i = 0; $i < 10; $i++)
+    {
+        $numeros[$i] = Math.round(Math.random() * 9 + 1);
+    }
+
+    for($i = 0; $i < 10; $i++)
+    {
+        document.write($numeros[$i] + " ");
+    }
+
+    document.write("</br>");
+
+    for($i = 0; $i < 10; $i++)
+    {
+        if($numeros[$i] % 2 == 0)
+        {
+            $suma += $numeros[$i];
+        }
+    }
+
+    document.write("La suma de los números pares del array es igual a: " + $suma);
+    document.write("</br>");
+}
+
+// Array invertido
+// Escribir una función que genere un array con 10 números aleatorios entre 1 y 50, muestra el array generado y devuelva el array en 
+// orden invertido
+document.write("<h2>Función array invertido</h2>");
+arrayInvertido();
+function arrayInvertido()
+{
+    let $array1 = [];
+    let $array2 = [];
+
+    for($i = 0; $i < 10; $i++)
+    {
+        $array1[$i] = Math.round(Math.random() * 49 + 1);
+        document.write($array1[$i] + " ");
+    }
+    // $array2 = $array1.reverse();
+    $k = 0;
+    for($i = 9; $i >= 0; $i--)
+    {
+        $array2[$i] = $array1[$k];
+        $k++;
+        document.write();
+    }
+    document.write("<br>");
+    for($i = 0; $i < 10; $i++)
+    {
+        document.write($array2[$i] + " ");
+    }
+}
