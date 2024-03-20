@@ -296,3 +296,60 @@ function arrayInvertido()
         document.write($array2[$i] + " ");
     }
 }
+document.write("<br><br>");
+/*
+    Escribe una función que genere una contraseña aleatoria de longitud dada, que pueda contener letras en minúsculas,
+    mayúsculas y números.
+*/
+passRand(10);
+
+function passRand($long)
+{
+    const $caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let $contra = "";
+
+    for($i = 0; $i < $long; $i++)
+    {
+        $contra = $contra + $caracteres.charAt(Math.floor(Math.random() * $caracteres.length));
+    }
+
+   document.write("La contraseña es " + $contra);
+}
+document.write("<br>");
+// Math.floor: Devuelve el entero por defecto Ej: 5,2 ó 5,8 --> Devuelve 5
+// Math.ceil : Devuelve el entero por exceso EJ: 5,2 ó 5,8 --> Devuelve 6
+
+/*
+    Escribe una función que genere la sucesión de fibonacci para los n números indicados
+*/
+fibonacci(10);
+
+function fibonacci($n)
+{
+    let $array = [];
+
+    if($n == 1)
+    {
+        $array = [0];
+    }
+    else
+    {
+        if($n == 2)
+        {
+            $array = [0,1];
+        }
+        else
+        {
+            $array = [0, 1];
+            for($i = 2; $i < $n; $i++)
+            {
+                $array[$i]=$array[$i-1]+$array[$i-2];
+            }
+        }
+    }
+
+  for($i = 0; $i < $n; $i++)
+  {
+    document.write($array[$i] + " ");
+  }
+}
