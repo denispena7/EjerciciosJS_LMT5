@@ -12,5 +12,70 @@
         document.write("Esto es un texto escrito con javascript");
     </script> -->
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, praesentium tempore, debitis voluptatibus ducimus, rerum animi rem voluptates quod quae accusantium saepe. Quibusdam soluta blanditiis ut numquam id, voluptatem officia!</p>
+    <form action="#" method="get">
+      <label>x</label>
+      <input type="text" name="ancho">
+
+      <label>y</label>
+      <input type="text" name="alto">
+
+      <br>
+
+      <label>TextArea</label><br>
+      <textarea name="descripcion" cols="20" rows="5"></textarea>
+
+      <br>
+
+      <label><input type="radio" name="valoracion" value="1" checked>bajo</label><br>
+      <label><input type="radio" name="valoracion" value="2">medio</label><br>
+      <label><input type="radio" name="valoracion" value="3">alto</label><br>
+
+      <br>
+
+      <label><input type="checkbox" name="coche" value="bmw">BMW</label> <br>
+      <label><input type="checkbox" name="coche" value="toyota">Toyota</label> <br>
+      <label><input type="checkbox" name="coche" value="mercedes">Mercedes</label> <br><br>
+
+      <select name="">
+        <option value="">Selecciona un color</option>
+        <option value="rojo">Rojo</option>
+        <option value="amarillo">Amarillo</option>
+        <option value="verde">Verde</option>
+      </select>
+
+      <br><br>
+
+      <!-- Campo de email -->
+      <input type="email" pattern=".+@example\.com" size="10" required minlength="5"/><br>
+      <!-- Campo de búsqueda -->
+      <input type="search" placeholder="Escribe algo">
+      <!-- Campo de color -->
+      <input type="color">
+      <!-- Campo de fecha -->
+      <input type="date">
+      <!-- Campo para fecha y hora -->
+      <input type="datetime-local">
+      <!-- Campo telefono -->
+      <input type="tel">
+      <!-- Campo url -->
+      <input type="url">
+      <!-- Campo numérico -->
+      <input type="number" min="0" max="10"><br><br>
+ 
+      <input type="range" id="price" name="price"  min="50000" max="500000" step="100" value="250000" />
+      <output class="price-output" for="price"></output>
+
+      <!-- Campo de mes -->
+      <input type="month">
+      <!-- Campo de semana -->
+      <input type="week">
+      <!-- Campo de hora -->
+      <input type="time">
+
+      <input type="reset" value="Limpiar">
+      <input type="button" value="Send">
+
+      <input type="submit" value="Enviar">
+    </form>
   </body>
 </html>
