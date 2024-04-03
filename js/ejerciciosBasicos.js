@@ -343,7 +343,7 @@ function fibonacci($n)
             $array = [0, 1];
             for($i = 2; $i < $n; $i++)
             {
-                $array[$i]=$array[$i-1]+$array[$i-2];
+                $array[$i] = $array[$i-1] + $array[$i-2];
             }
         }
     }
@@ -352,4 +352,32 @@ function fibonacci($n)
   {
     document.write($array[$i] + " ");
   }
+}
+
+document.write("<br>");
+
+/*  Ejercicio máximo
+    Solicitar al usuario el tamaño de un array que se debe rellenar con números aleatorios entre el 1 y el 100 y
+    mostrar en pantalla todos los números generados y cual es el mayor de ellos
+*/
+numeroMax();
+function numeroMax()
+{
+    let $longitud = parseInt(prompt("Tamaño del array"));
+    let $array = new Array($longitud);
+    let $max = 0;
+
+    document.write("<h1>El resultado de este ejercicio</h1>");
+
+    for($i = 0; $i < $array.length; $i++)
+    {
+        $array[$i] = Math.floor(Math.random() * 100 )+ 1;
+        document.write($array[$i] + "" + "<br>");
+        if($array[$i] > $max)
+        {
+            $max = $array[$i];
+        }
+    }
+
+    document.write("El máximo es " + $max);
 }

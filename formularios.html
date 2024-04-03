@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="evento('onresize')">
+    <form action="#" method="get" onsubmit="evento('onsubmit')" onreset="evento('onreset')">
+        <label>x</label>
+        <input type="text" onfocus="evento('onfocus')" onblur="evento('onblur')" onchange="evento('onchange')" name="ancho">
+  
+        <label>y</label>
+        <input type="text" onselect="evento('onselect')" name="alto">
+  
+        <br>
+  
+        <label>TextArea</label><br>
+        <textarea onchange="cambio()" name="descripcion" cols="20" rows="5"></textarea>
+  
+        <br>
+  
+        <label><input type="radio" name="valoracion" onchange="evento('cambio radio1')" value="1" checked>bajo</label><br>
+        <label><input type="radio" name="valoracion" onchange="evento('cambio radio2')" value="2">medio</label><br>
+        <label><input type="radio" name="valoracion" onchange="evento('cambio radio3')" value="3">alto</label><br>
+  
+        <br>
+  
+        <label><input type="checkbox" name="coche" onchange="evento('cambio checkbox1')" value="bmw">BMW</label> <br>
+        <label><input type="checkbox" name="coche" onchange="evento('cambio checkbox2')" value="toyota">Toyota</label> <br>
+        <label><input type="checkbox" name="coche" onchange="evento('cambio checkbox3')" value="mercedes">Mercedes</label> <br><br>
+  
+        <select  name="">
+          <option value="">Selecciona un color</option>
+          <option value="rojo">Rojo</option>
+          <option value="amarillo">Amarillo</option>
+          <option value="verde">Verde</option>
+        </select>
+  
+        <br><br>
+  
+        <!-- Campo de email -->
+        <input type="email" pattern=".+@example\.com" size="10" required minlength="5"/><br>
+        <!-- Campo de búsqueda -->
+        <input type="search" placeholder="Escribe algo">
+        <!-- Campo de color -->
+        <input type="color">
+        <!-- Campo de fecha -->
+        <input type="date">
+        <!-- Campo para fecha y hora -->
+        <input type="datetime-local">
+        <!-- Campo telefono -->
+        <input type="tel">
+        <!-- Campo url -->
+        <input type="url">
+        <!-- Campo numérico -->
+        <input type="number" min="0" max="10"><br><br>
+   
+        <input type="range" id="price" name="price"  min="50000" max="500000" step="100" value="250000" />
+        <output class="price-output" for="price"></output>
+  
+        <!-- Campo de mes -->
+        <input type="month">
+        <!-- Campo de semana -->
+        <input type="week">
+        <!-- Campo de hora -->
+        <input type="time">
+  
+        <input type="reset" onreset="evento('onreset')" value="Limpiar">
+        <input type="button" value="Send">
+  
+        <input onsubmit="evento('onsubmit')" type="submit" value="Enviar">
+      </form>
+
+      <script language="javascript" type="text/javascript" src="./js/eventos.js"></script>
+</body>
+</html>

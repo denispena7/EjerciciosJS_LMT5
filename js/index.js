@@ -106,6 +106,16 @@ document.write("Minutos: " + $fecha.getMinutes() + "<br>");
 document.write("Segundos: " + $fecha.getSeconds() + "<br>");
 document.write("Milisegundos: " + $fecha.getMilliseconds() + "<br>");
 
+function evento ($tipo)
+{
+    console.log("Se ha producido un evento " + $tipo);
+}
+
+function pulsada(event)
+{
+    console.log("La tecla pulsada es " + String.fromCharCode(event.keyCode))
+}
+
 /* $fecha = new Date(2015, 9, 22, 14, 0);
 document.write("Fecha: " + $fecha.getDay() + "<br>"); */
 
