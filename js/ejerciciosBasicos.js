@@ -360,7 +360,7 @@ document.write("<br>");
     Solicitar al usuario el tamaño de un array que se debe rellenar con números aleatorios entre el 1 y el 100 y
     mostrar en pantalla todos los números generados y cual es el mayor de ellos
 */
-numeroMax();
+//numeroMax();
 function numeroMax()
 {
     let $longitud = parseInt(prompt("Tamaño del array"));
@@ -381,3 +381,91 @@ function numeroMax()
 
     document.write("El máximo es " + $max);
 }
+
+/*
+    Ejercicio: Contar números primos. Solicitar un número e indicar la cantidad de números primos que existen menores o iguales al 
+    números dado.
+*/
+
+//document.write("<p>Resultado del ejercicio <strong>contar números primos</strong></p>");
+//contarNumerosPrimos(prompt("Indica un número"));
+
+function contarNumerosPrimos()
+{
+    $num = parseInt(prompt("Dime un número", 0));
+
+    for($i = 2; $i <= $num; $i++)
+    {
+        if(esPrimo($i))
+        {
+            document.write($i + " ");
+        }
+    }
+}
+
+function esPrimo($num)
+{
+    $x = true;
+
+    for($j = 2; $j < $num; $j++)
+    {
+        if($num % $j == 0)
+        {
+            $x = false;
+        }
+    }
+    return $x;
+}
+
+
+//sumarDigitos();
+
+function sumarDigitos()
+{
+    let $num = prompt("Indica un numero");
+
+    let $suma = 0;
+
+    
+    for($i = 0; $i < $num.length; $i++)
+    {
+        $suma += parseInt($num[$i]);
+    }
+
+    if($num.length == 1)
+    {
+        $suma = 1;
+    }
+    
+    document.write("La suma de los dígitos de "+$num+" es "+ $suma);
+}
+
+/*
+    Ejercicio: Hacer un conteo de cada caracter que aparece en una cadena pedida por teclado
+*/
+
+contarCaracteres();
+function contarCaracteres()
+{
+    let cadena = prompt("Indica una cadena");
+    let caracteresCadena = [];
+    for($i = 0; $i < cadena.length; $i++)
+    {
+        caracter = cadena.charAt($i);
+        if(caracteresCadena[caracter])
+        {
+            caracteresCadena[caracter]++;
+        }
+        else
+        {
+            caracteresCadena[caracter] = 1;
+        }
+
+        // caracteresCadena[caracter] = caracteresCadena[cadena] ? caracteresCadena[caracter];
+    }
+
+    for(caracteres in caracteresCadena)
+    {
+        document.write(caracteres + " = " + caracteresCadena[caracteres] + "<br>");
+    }
+} 
