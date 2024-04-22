@@ -116,6 +116,29 @@ function pulsada(event)
     console.log("La tecla pulsada es " + String.fromCharCode(event.keyCode))
 }
 
+let cabeceras = document.getElementsByTagName('h1');
+let primeraCabecera = cabeceras[0];
+
+let nameParrafo = document.getElementsByName('parrafo');
+
+let primero = document.getElementById('primero');
+primero.style.color = 'red';
+
+document.getElementsByClassName('negrita');
+
+function crear()
+{
+   // Creamos el element
+    let nuevoParrafo = document.createElement("p");
+    // Creamos el text
+    let contenido = document.createTextNode("Buenos días por la mañana");
+    // Añadimos el text al element
+    nuevoParrafo.appendChild(contenido);
+    // Añadimos el nuevo elemento al body
+    document.body.appendChild(nuevoParrafo); 
+}
+
+
 /* $fecha = new Date(2015, 9, 22, 14, 0);
 document.write("Fecha: " + $fecha.getDay() + "<br>"); */
 
