@@ -469,3 +469,40 @@ function contarCaracteres()
         document.write(caracteres + " = " + caracteresCadena[caracteres] + "<br>");
     }
 } 
+
+// Ejercicio 19
+let hoy = new Date();
+
+let fechaNac = prompt("Dame tu fecha de nacimiento (DD/MM/YYYY):");
+let array = fechaNac.split("/");
+
+let anio = hoy.getFullYear() - array[2];
+let mes = (hoy.getMonth() + 1) - array[1];
+let dia = (hoy.getDate() + 1) - array[0];
+
+if(anio > 0)
+{
+    if(mes > 0)
+    {
+        document.write("Tienes "+anio+" años");
+    }
+    else if(mes == 0)
+    {
+        if(dia > 0)
+        {
+            document.write("Tienes "+anio+" años");
+        }
+        else
+        {
+            document.write("Tienes "+(anio - 1)+" años");
+        }
+    }
+    else
+    {
+        document.write("Tienes "+(anio - 1)+" años");
+    }
+}
+else
+{
+    document.write("La fecha de nacimiento es incorrecta");
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Ejercicio 21</title>
+</head>
+<body>
+    <div id="contenedor">
+        <div id="skyblue" onmouseover="fondo('#5BBCFF')"></div>
+        <div id="lightgreen" onmouseover="fondo('#FFFAB7')"></div>
+        <div id="gray" onmouseover="fondo('#FFD1E3')"></div>
+        <div id="pink" onmousemove="fondo('violet')"></div>
+        <div id="violet" onmouseover="fondo('#7EA1FF')"></div>
+    </div>
+
+    <script language="javascript" type="text/javascript">
+        function fondo($color)
+        {
+            let contenedor = document.getElementById('contenedor');
+            contenedor.style.backgroundColor = $color;
+        }
+    </script>
+</body>
+</html>
