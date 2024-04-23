@@ -1,0 +1,41 @@
+div
+{
+    width: 220px;
+    height: 220px;
+}
+
+#contenedor
+{
+    background-color: whitesmoke;
+    width: 1341px;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#skyblue
+{
+    background-color: #5BBCFF;
+}
+
+#lightgreen
+{
+    background-color: #FFFAB7;
+}
+
+#gray
+{
+    background-color: #FFD1E3;
+}
+
+#pink
+{
+    background-color: violet;
+}
+
+#violet
+{
+    background-color: #7EA1FF;
+}
