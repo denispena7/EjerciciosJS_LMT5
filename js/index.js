@@ -138,6 +138,43 @@ function crear()
     document.body.appendChild(nuevoParrafo); 
 }
 
+function cambiar()
+{
+    $enlace = document.getElementById("enlace1");
+  //  $enlace = 
+}
+
+function validar()
+{
+    let $ancho = document.getElementById("ancho").value;
+    let $alto = document.getElementById("alto").value;
+    if($ancho == $alto)
+    {
+        window.alert("Son iguales");
+        window.open("http://w3.es");
+    }
+    else
+    {
+        alert("Son distintos");
+        location.href("http://google.es");
+    }
+}
+
+history.back();
+history.forward();
+history.go(-5);
+history.length;
+
+alert(screen.width);
+alert(screen.height);
+alert(screen.colorDepth);
+
+let enlaces = document.links;
+// enlaces = document.anchors;
+for(i = 0; i < enlaces.length; i++)
+{
+    alert(enlaces[i].href);
+}
 
 /* $fecha = new Date(2015, 9, 22, 14, 0);
 document.write("Fecha: " + $fecha.getDay() + "<br>"); */
