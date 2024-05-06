@@ -165,9 +165,9 @@ history.forward();
 history.go(-5);
 history.length;
 
-alert(screen.width);
-alert(screen.height);
-alert(screen.colorDepth);
+// alert(screen.width);
+// alert(screen.height);
+// alert(screen.colorDepth);
 
 let enlaces = document.links;
 // enlaces = document.anchors;
@@ -175,6 +175,30 @@ for(i = 0; i < enlaces.length; i++)
 {
     alert(enlaces[i].href);
 }
+
+//$("p").hide()
+// $(document).ready(function())
+
+$(function(){
+    $("#btnOcultar").on("click", function(){
+        $("p").hide();
+        // alert("Se han ocultado todos los párrafos")
+       // $(this).css("background-color", "#F00");
+       // $("#btnCambiar").css("background-color", "#0F0");
+    });
+
+    $("#btnMostrar").on("click", function(){
+        $("p").show();
+    });
+});
+
+// mouseenter
+
+$("*")
+$("p.primero")
+$("#primero")
+$("p:first") // Devuelve el primer párrafo de un documento
+$("a[target='_blank']") // Selecciona todos los elementos con el atributo href
 
 /* $fecha = new Date(2015, 9, 22, 14, 0);
 document.write("Fecha: " + $fecha.getDay() + "<br>"); */
