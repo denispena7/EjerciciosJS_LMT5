@@ -138,10 +138,30 @@ function crear()
     document.body.appendChild(nuevoParrafo); 
 }
 
+function eliminar() {
+    // let $parrafos = document.getElementsByTagName("p");
+    // let $ultimo = $parrafos[$parrafos.length-1];
+    let $parrafo = document.getElementById("segundo");
+  
+    //$ultimo.remove();
+    //document.body.removeChild($ultimo);
+    //$ultimo.parentNode.removeChild($ultimo);
+    $parrafo.remove();
+  }
+  
+  $segundo = document.getElementById("segundo");
+  $segundo.style.textDecoration = "underline";
+  
+  $imagen = document.getElementById("lista");
+  $imagen.style.border = 5;
+  $imagen.style.borderStyle = "solid";
+  $imagen.style.borderColor = "red";
+  
+
 function cambiar()
 {
     $enlace = document.getElementById("enlace1");
-  //  $enlace = 
+    $enlace.href="https://grupostudium.com";
 }
 
 function validar()
@@ -179,6 +199,31 @@ for(i = 0; i < enlaces.length; i++)
 //$("p").hide()
 // $(document).ready(function())
 
+//$(document).ready(function(){
+  //  $(function(){
+        //Codigo jQuery
+    //    $("#btnOcultar").on("click",function(){
+          //$("p").hide();
+          // alert("Se han ocultado todos los párrafos");
+          // $(this).css("background-color","#FF0000");
+          // $("#btnCambiar").css("background-color","#00ff00");
+          // $("#primero").fadeOut();
+          // $("#segundo").fadeOut("slow");
+          // $("#tercero").fadeOut(3000); 
+          //$("p").toggle();
+      //    $("p").slideUp(3000).slideDown(3000);   
+     //   });
+
+     $("#btnMostrar").on("click",function(){
+        //$("p").show();
+    
+        // $("#primero").fadeIn();
+        // $("#segundo").fadeIn("slow");
+        // $("#tercero").fadeIn(3000);
+        //$("p").toggle();
+        $("p").slideDown(3000);  
+      });
+
 $(function(){
     $("#btnOcultar").on("click", function(){
         $("p").hide();
@@ -192,13 +237,36 @@ $(function(){
     });
 });
 
+$("#btnMover").on("click",function(){
+    $("#cuadrado").animate({right: "400px"},5000,function(){
+      $("#cuadrado").animate({left: "200px"},5000,function(){
+      });
+    });
+});
+
+$("#btnParar").on("click", function(){
+    $("#cuadrado").stop();
+});
+
+$("#btnCrear").on("click", function(){
+    $("p").prepend("Texto nuevo");
+});
+
+$("#btnRemove").on("click", function(){
+    $("form").remove();
+});
+
+$("#btnEmpty").on("click", function(){
+    $("form").empty();
+});
+
 // mouseenter
 
-$("*")
-$("p.primero")
-$("#primero")
-$("p:first") // Devuelve el primer párrafo de un documento
-$("a[target='_blank']") // Selecciona todos los elementos con el atributo href
+// $("*")
+// $("p.primero")
+// $("#primero")
+// $("p:first") // Devuelve el primer párrafo de un documento
+// $("a[target='_blank']") // Selecciona todos los elementos con el atributo href
 
 /* $fecha = new Date(2015, 9, 22, 14, 0);
 document.write("Fecha: " + $fecha.getDay() + "<br>"); */
