@@ -1,0 +1,1 @@
+document.write("Tirada primer dado");
