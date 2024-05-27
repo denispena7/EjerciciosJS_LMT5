@@ -1,4 +1,134 @@
+@font-face 
+{
+    font-family: 'Azonix';
+    src: url(./fonts/Azonix.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+*
+{
+    margin: 0;
+    font-family: 'Century Gothic';
+}
+
+body
+{
+    background-color: rgba(218,217,190,255);
+}
+
+.cabecera
+{
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(7, 65, 115, 255);
+}
+
+.cabecera_nombre
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cabecera_titulo
+{
+    display: flex;
+    align-items: center;
+}
+
+.nombre_inicial
+{
+    width: 85px;
+    margin-right: 25px;
+    border: 1px solid white;
+    border-radius: 45px;
+}
+
+.nombre_denis, .titulo_tema, .encabezado_titulo, .ejercicios_encabezado
+{
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-family: 'Azonix';
+    color: white;
+}
+
+.barra-lateral_encabezado
+{
+    margin: 15px;
+    border-bottom: 1px solid black;
+}
+
+.barra-lateral_caja
+{
+    padding: 5px 0 5px 0;
+}
+
+.encabezado_titulo, .ejercicios_encabezado
+{
+    margin-bottom: 15px;
+    color: black;
+}
+
+.ejercicios_contenido
+{
+    border-top: 1px solid black;
+}
+
+.contenido
+{
+    width: 95%;
+    margin: 20px auto;
+    background-color: rebeccapurple;
+}
+
+.contenido_barra-lateral
+{
+    width: 23%;
+    float: left;
+    border: 1px solid rgb(78, 78, 78);
+    box-shadow: 0px 2px 2px rgb(46, 46, 46);
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.contenido_seccion
+{
+    width: 72%;
+    min-height: 660px;
+    margin-bottom: 30px;
+    float: right;
+    border: 1px solid rgb(78, 78, 78);
+    box-shadow: 0px 2px 2px rgb(46, 46, 46);
+}
+
+.contenido_ejercicios
+{
+    padding: 15px;
+    text-align: center;
+}
+
 button
 {
-    display: block;
+    background-image: linear-gradient(to right, #000046 0%, #1CB5E0  51%, #000046  100%);
+    padding: 15px 45px;
+    letter-spacing: 1px; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 70%;
+}
+
+button:hover
+{
+    background-position: right center;
+    color: #fff;
 }
