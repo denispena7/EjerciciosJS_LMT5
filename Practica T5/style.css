@@ -67,15 +67,21 @@ body
     padding: 5px 0 5px 0;
 }
 
-.encabezado_titulo, .ejercicios_encabezado
+.encabezado_titulo, .ejercicios_encabezado, .ejercicios_titulo
 {
     margin-bottom: 15px;
     color: black;
 }
 
-.ejercicios_contenido
+.ejercicios_borde
 {
     border-top: 1px solid black;
+}
+
+h2, h3
+{
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 
 .contenido
@@ -111,7 +117,7 @@ body
     text-align: center;
 }
 
-button
+#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8, #btn9, #btn10
 {
     background-image: linear-gradient(to right, #000046 0%, #1CB5E0  51%, #000046  100%);
     padding: 15px 45px;
@@ -127,7 +133,7 @@ button
     width: 70%;
 }
 
-button:hover
+#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn5:hover, #btn6:hover, #btn7:hover, #btn8:hover, #btn9:hover, #btn10:hover
 {
     background-position: right center;
     color: #fff;

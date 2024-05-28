@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./alertify/css/alertify.css">
     <title>Práctica T5 - JS</title>
 </head>
 <body>
@@ -23,46 +24,55 @@
             </div>
 
             <div class="barra-lateral_caja">
-                <button>Ejercicio 1</button>
+                <button id="btn1">Ejercicio 1</button>
             </div>
             <div class="barra-lateral_caja">
-                <button>Ejercicio 2</button>
+                <button id="btn2" onclick="compara()">Ejercicio 2</button>
             </div>
             <div class="barra-lateral_caja">
-                <button>Ejercicio 3</button>
+                <button id="btn3">Ejercicio 3</button>
             </div>
             <div class="barra-lateral_caja">
-                <button>Ejercicio 4</button>
+                <button id="btn4">Ejercicio 4</button>
             </div>
             <div class="barra-lateral_caja">
-                <button>Ejercicio 5</button>
+                <button id="btn5">Ejercicio 5</button>
             </div>
             <div class="barra-lateral_caja">
-                <button>Ejercicio 6</button>
+                <button id="btn6">Ejercicio 6</button>
             </div>
             <div class="barra-lateral_caja">
-                <button>Ejercicio 7</button>
+                <button id="btn7">Ejercicio 7</button>
             </div>
             <div class="barra-lateral_caja">
-                <button>Ejercicio 8</button>
+                <button id="btn8">Ejercicio 8</button>
             </div>
             <div class="barra-lateral_caja">
-                <button>Ejercicio 9</button>
+                <button id="btn9">Ejercicio 9</button>
             </div>
             <div class="barra-lateral_caja">
-                <button>Ejercicio 10</button>
+                <button id="btn10">Ejercicio 10</button>
             </div>
         </aside>
 
         <div class="contenido_seccion">
             <section class="contenedor_contenido">
                 <article class="contenido_ejercicios">
-                    <h1 class="ejercicios_encabezado">Aquí se mostrarán los ejercicios</h1>
-                    <div class="ejercicios_contenido"></div>
+                    <h1 id="encabezado" class="ejercicios_encabezado">Aquí se mostrarán los ejercicios</h1>
+                    <div class="ejercicios_borde"></div>
+                    <h2 id="ejercicios_titulo"></h2>
+                    <div class="ejercicios_contenido">
+                        <h3 id="subtitulo"></h3>
+                        <div id="ejercicio"></div>
+                    </div>
                 </article>
             </section>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./alertify/alertify.js"></script>
+    <script lang="javascript" type="text/javascript" src="./index.js"></script>
 </body>
 
 </html>
