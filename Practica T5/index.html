@@ -20,23 +20,23 @@
     <div class="contenido">
         <aside class="contenido_barra-lateral">
             <div class="barra-lateral_encabezado">
-                <h1 class="encabezado_titulo">Toca un botón</h1>
+                <h1 class="encabezado_titulo">Pulsa un botón</h1>
             </div>
 
             <div class="barra-lateral_caja">
                 <button id="btn1">Ejercicio 1</button>
             </div>
             <div class="barra-lateral_caja">
-                <button id="btn2" onclick="compara()">Ejercicio 2</button>
+                <button id="btn2">Ejercicio 2</button>
             </div>
             <div class="barra-lateral_caja">
                 <button id="btn3">Ejercicio 3</button>
             </div>
             <div class="barra-lateral_caja">
-                <button id="btn4">Ejercicio 4</button>
+                <button id="btn4" onclick="clic()">Ejercicio 4</button>
             </div>
             <div class="barra-lateral_caja">
-                <button id="btn5">Ejercicio 5</button>
+                <button id="btn5" onclick="fondo(218,217,190,255)">Ejercicio 5</button>
             </div>
             <div class="barra-lateral_caja">
                 <button id="btn6">Ejercicio 6</button>
@@ -48,7 +48,7 @@
                 <button id="btn8">Ejercicio 8</button>
             </div>
             <div class="barra-lateral_caja">
-                <button id="btn9">Ejercicio 9</button>
+                <button id="btn9" onclick="titulosPaises()">Ejercicio 9</button>
             </div>
             <div class="barra-lateral_caja">
                 <button id="btn10">Ejercicio 10</button>
@@ -61,9 +61,22 @@
                     <h1 id="encabezado" class="ejercicios_encabezado">Aquí se mostrarán los ejercicios</h1>
                     <div class="ejercicios_borde"></div>
                     <h2 id="ejercicios_titulo"></h2>
+                    <h3 id="subtitulo"></h3>
+                    <h3 id="subtitulo2" onclick="clic('onclick')"></h3>
+                    <h3 id="subtitulo3" ondblclick="clic('ondblclick')"></h3>
                     <div class="ejercicios_contenido">
-                        <h3 id="subtitulo"></h3>
-                        <div id="ejercicio"></div>
+                        <div id="ejercicio">
+                            <div id="skyblue" onmouseover="fondo('#5BBCFF')" onmouseout="fondo('#dad9be')"></div>
+                            <div id="lightgreen" class="fra" onmouseover="fondo('#FFFAB7')"onmouseout="fondo('#dad9be')"></div>
+                            <div id="gray" class="por" onmouseover="fondo('#FFD1E3')" onmouseout="fondo('#dad9be')"></div>
+                            <div id="pink" class="ita" onmouseover="fondo('violet')" onmouseout="fondo('#dad9be')"></div>
+                            <div id="violet" onmouseover="fondo('#7EA1FF')" onmouseout="fondo('#dad9be')"></div>
+
+                            <div id="esp" onmouseenter="paises('España', 'Madrid')"></div>
+                            <div id="por" onmouseenter="paises('Portugal', 'Lisboa')"></div>
+                            <div id="fra" onmouseenter="paises('Francia', 'Paris')"></div>
+                            <div id="ita" onmouseenter="paises('Italia', 'Roma')"></div>
+                        </div>
                     </div>
                 </article>
             </section>
@@ -74,5 +87,4 @@
     <script src="./alertify/alertify.js"></script>
     <script lang="javascript" type="text/javascript" src="./index.js"></script>
 </body>
-
 </html>
