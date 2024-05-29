@@ -143,3 +143,10 @@ h2, h3
 {
     margin-top: 90px;
 }
+
+
+.caja_encabezado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

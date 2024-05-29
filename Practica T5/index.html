@@ -39,10 +39,10 @@
                 <button id="btn5" onclick="fondo(218,217,190,255)">Ejercicio 5</button>
             </div>
             <div class="barra-lateral_caja">
-                <button id="btn6">Ejercicio 6</button>
+                <button id="btn6" onclick="dni()">Ejercicio 6</button>
             </div>
             <div class="barra-lateral_caja">
-                <button id="btn7">Ejercicio 7</button>
+                <button id="btn7" onclick="dados()">Ejercicio 7</button>
             </div>
             <div class="barra-lateral_caja">
                 <button id="btn8">Ejercicio 8</button>
@@ -58,13 +58,18 @@
         <div class="contenido_seccion">
             <section class="contenedor_contenido">
                 <article class="contenido_ejercicios">
-                    <h1 id="encabezado" class="ejercicios_encabezado">Aquí se mostrarán los ejercicios</h1>
+                    <div class="caja_encabezado">
+                        <h1 id="encabezado" class="ejercicios_encabezado">Ejercicios</h1>
+                        <a href="index.html" class="btnRefresh" title="Limpiar">
+                            <img src="./img/refresh.png" width="50px" alt="Refresh">
+                        </a>
+                    </div>
                     <div class="ejercicios_borde"></div>
                     <h2 id="ejercicios_titulo"></h2>
                     <h3 id="subtitulo"></h3>
                     <h3 id="subtitulo2" onclick="clic('onclick')"></h3>
                     <h3 id="subtitulo3" ondblclick="clic('ondblclick')"></h3>
-                    <div class="ejercicios_contenido">
+                    <div id="ejercicios_contenido">
                         <div id="ejercicio">
                             <div id="skyblue" onmouseover="fondo('#5BBCFF')" onmouseout="fondo('#dad9be')"></div>
                             <div id="lightgreen" class="fra" onmouseover="fondo('#FFFAB7')"onmouseout="fondo('#dad9be')"></div>
@@ -72,10 +77,10 @@
                             <div id="pink" class="ita" onmouseover="fondo('violet')" onmouseout="fondo('#dad9be')"></div>
                             <div id="violet" onmouseover="fondo('#7EA1FF')" onmouseout="fondo('#dad9be')"></div>
 
-                            <div id="esp" onmouseenter="paises('España', 'Madrid')"></div>
-                            <div id="por" onmouseenter="paises('Portugal', 'Lisboa')"></div>
-                            <div id="fra" onmouseenter="paises('Francia', 'Paris')"></div>
-                            <div id="ita" onmouseenter="paises('Italia', 'Roma')"></div>
+                            <div id="esp" onmouseover="paises('España', 'Madrid')"></div>
+                            <div id="por" onmouseover="paises('Portugal', 'Lisboa')"></div>
+                            <div id="fra" onmouseover="paises('Francia', 'Paris')"></div>
+                            <div id="ita" onmouseover="paises('Italia', 'Roma')"></div>
                         </div>
                     </div>
                 </article>

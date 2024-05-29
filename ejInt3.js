@@ -9,7 +9,7 @@ function dni()
     {
         let $ind = $num % 23;
         let $car = $letras[$ind];
-        //alert("La letra es " + $car + ", el resto es " + $ind);12345678
+        //alert("La letra es " + $car + ", el resto es " + $ind);
 
         if($letra == $car)
         {

@@ -7,9 +7,11 @@ let $ejercicio = document.getElementById('ejercicio');
 let $resultado;
 
 function tabla($num) {
+    $ejercicio.innerHTML = "";
     $titulo.innerHTML = 'Ejercicio Básico Nº 17';
     $subtitulo.innerHTML = 'Tabla del número ' + $num;
-    $ejercicio.innerHTML = "";
+    $subtitulo2.innerHTML = "";
+    $subtitulo3.innerHTML = "";
 
     for ($i = 1; $i <= 12; $i++) {
         $resultado = $num * $i;
@@ -34,11 +36,14 @@ $("#btn1").on('click', function () {
 });
 
 // Ejercicio básico Nº 18
-function compara($num1, $num2) {
-    // $num1 = prompt("Indica el primer número");
-    // $num2 = prompt("Indica el segundo número");
+function compara() {
+    $num1 = prompt("Indica el primer número");
+    $num2 = prompt("Indica el segundo número");
     $titulo.innerHTML = 'Ejercicio Básico Nº 18';
+    $ejercicio.innerHTML = "";
     $subtitulo.innerHTML = "";
+    $subtitulo2.innerHTML = "";
+    $subtitulo3.innerHTML = "";
 
     if ($num1 == $num2) {
         $subtitulo.innerHTML = 'Los números son iguales';
@@ -48,23 +53,11 @@ function compara($num1, $num2) {
     }
 }
 
-$("#btn2").on('click', function () {
-    alertify.prompt("Comparar números", "Escribe el primer número", "",
-        function (onclick, value1) {
-            let $numero1 = Number(value1);
-            if (isNaN($numero1) || value1 == "") {
-                alertify.error("Tienes que ingresar un número.");
-            } else {
-                alertify.prompt("Comparar Números", "Escribe el segundo número", "");
-            }
-        },
-        function () {
-            alertify.error("Cancelado");
-        }
-    );
+$("#btn2").on("click", function(){
+    compara();
 });
 
-// Ejercicio N° 19
+// Ejercicio básico N° 19
 function calcularEdad($fecha) {
     $titulo.innerHTML = 'Ejercicio Básico Nº 19';
     let $hoy = new Date();
@@ -73,6 +66,8 @@ function calcularEdad($fecha) {
     let $anio = $hoy.getFullYear() - $array[2];
     let $mes = ($hoy.getMonth() + 1) - $array[1];
     let $dia = ($hoy.getDate() + 1) - $array[0];
+
+ //   $ejercicio.innerHTML = "";
 
     if ($anio > 0) {
         if ($mes > 0) {
@@ -111,11 +106,13 @@ $("#btn3").on('click', function () {
     );
 });
 
-// Ejercicio 20
+// Ejercicio básico N° 20
 function clic($tipo) {
     $titulo.innerHTML = 'Ejercicio Básico Nº 20';
+    $subtitulo.innerHTML = "";
     $subtitulo2.innerHTML = 'Javascript clic';
     $subtitulo3.innerHTML = 'Javascript doble clic';
+  //  $ejercicio.innerHTML = "";
 
     if ($tipo == "onclick") {
         alertify.alert().set("label", "OK").setContent("<h1>Has hecho un clic</h1>").show();
@@ -125,7 +122,7 @@ function clic($tipo) {
     }
 }
 
-// Ejercicio 21
+// Ejercicio básico N° 21
 let $skyblue = document.getElementById('skyblue');
 let $lightgreen = document.getElementById('lightgreen');
 let $gray = document.getElementById('gray');
@@ -134,6 +131,9 @@ let $violet = document.getElementById('violet');
 
 function fondo($color) {
     $titulo.innerHTML = 'Ejercicio Básico Nº 21';
+  //  $subtitulo.innerHTML = "";
+    $subtitulo2.innerHTML = "";
+    $subtitulo3.innerHTML = "";
 
     $ejercicio.style.height = "600px";
     $ejercicio.style.display = 'flex';
@@ -163,6 +163,125 @@ function fondo($color) {
     $ejercicio.style.backgroundColor = $color;
 }
 
+// Ejercicio Intermedio N° 3
+function dni() {
+    $titulo.innerHTML = 'Ejercicio Intermedio Nº 3';
+    let $num = prompt("Indique su número de dni");
+    let $letra = prompt("Indique la letra de su dni");
+
+    let $letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+    if ($num > 0 && $num < 99999999) {
+        let $ind = $num % 23;
+        let $car = $letras[$ind];
+        //alert("La letra es " + $car + ", el resto es " + $ind);
+
+        if ($letra == $car) {
+            alert("El número y la letra del dni son correctos");
+        }
+        else {
+            alert("La letra que has indicado no es correcta");
+        }
+    }
+    else {
+        alert("El número proporcionado no es válido");
+    }
+}
+
+// Ejercico Intermedio N° 6
+function dados() 
+{
+    $titulo.innerHTML = 'Ejercicio Intermedio Nº 6';
+    
+    // Crear un array para contar las apariciones de cada suma (2 a 12)
+    let apariciones = new Array(13).fill(0);
+
+    // Repetir la simulación 36000 veces
+    for (let i = 0; i < 36000; i++) {
+    // Generar dos números aleatorios entre 1 y 6
+    let dado1 = Math.floor(Math.random() * 6) + 1;
+    let dado2 = Math.floor(Math.random() * 6) + 1;
+
+    // Sumar los resultados de los dos dados
+    let suma = dado1 + dado2;
+
+    // Incrementar el contador correspondiente a la suma
+    apariciones[suma]++;
+    }
+
+    // Imprimir los resultados
+    for (let i = 2; i < apariciones.length; i++) 
+    {
+        console.log('Suma que da como resultado ' + i + ': ' + apariciones[i] + ' apariciones');
+    }
+
+    let nuevoheading = document.createElement("h3");
+    let contenido = document.createTextNode("Ver consola");
+    nuevoheading.appendChild(contenido);
+    $ejercicio.appendChild(nuevoheading);
+}
+
+// Ejercicio Intermedio N° 8
+function palin($cadena) 
+{
+    $titulo.innerHTML = 'Ejercicio Intermedio Nº 8';
+    $ejercicio.innerHTML = "";
+    let $array = [];
+    let $arrayInvertido = [];
+
+    let $j = 0;
+
+    for($i = 0; $i < $cadena.length; $i++) 
+    {
+        if($cadena.charAt($i) != ' ')
+        {
+            $array[$j] = $cadena.charAt($i);
+            $j++;
+        }
+    }
+
+    for ($i = 0; $i < $j; $i++) 
+    {
+        $arrayInvertido[$i] = $array[$j - $i - 1];
+    }
+
+    // Comparar el array original con el array invertido
+    let $esPalindromo = true;
+    for($i = 0; $i < $j; $i++) 
+    {
+        if($array[$i] != $arrayInvertido[$i]) 
+        {
+            $esPalindromo = false;
+        }
+    }
+
+    if($esPalindromo == true)
+    {
+        $subtitulo.innerHTML = "La cadena es un palíndromo";
+    }
+    else
+    {
+        $subtitulo.innerHTML = "La cadena no es un palíndromo";
+    }
+}
+
+$("#btn8").on('click', function () {
+    alertify.prompt("Palíndromo", "Escribe una cadena de texto", "",
+        function (onclick, value) {
+            let $frase = String(value);
+            if (value == "") {
+                alertify.error("Tienes que ingresar una cadena de texto.");
+            } else {
+                palin($frase);
+            }
+        },
+        function () {
+            alertify.error("Cancelado");
+        }
+    );
+});
+
+
 // Ejercicio Intermedio 10
 let $esp = document.getElementById('esp');
 let $por = document.getElementById('por');
@@ -171,6 +290,7 @@ let $ita = document.getElementById('ita');
 
 function titulosPaises() {
     $titulo.innerHTML = 'Ejercicio Intermedio Nº 10';
+    $subtitulo.innerHTML = "";
     $esp.innerHTML = "<h3>España</h3>";
     $por.innerHTML = "<h3>Portugal</h3>";
     $fra.innerHTML = "<h3>Francia</h3>";
@@ -215,7 +335,7 @@ function paises($pais, $capital) {
 // Ejercicio Avanzado 2
 function saludo($nombre) {
     $titulo.innerHTML = "Ejercicio Avanzado N°2";
-
+    $ejercicio.innerHTML = "";
     $subtitulo.innerHTML = "Hola " + $nombre;
 
     $subtitulo.style.fontSize = '10px';
@@ -232,7 +352,7 @@ function saludo($nombre) {
     if ($hoy.getHours() < 12) {
         $buenas = "buenos días.";
     }
-    else if ($hoy.getHours() > 12 && $hoy.getHours() < 21) {
+    else if ($hoy.getHours() >= 12 && $hoy.getHours() < 21) {
         $buenas = "buenas tardes.";
     }
     else {
